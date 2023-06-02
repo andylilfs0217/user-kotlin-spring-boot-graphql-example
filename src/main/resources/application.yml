@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myusername
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+  flyway:
+    locations: classpath:db/migration
